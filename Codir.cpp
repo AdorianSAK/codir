@@ -8,26 +8,31 @@
 #define BLUE "\e[38;5;63m"
 #define HEART "\e[38;5;197m"
 #define MAGENTA "\e[38;5;207m"
+#define RED "\e[38;5;196m"
 
-int selectedPhraseNumber(std::ifstream *phr);
-void zilchFace(int *output);
+int selectedPhraseNumber(std::ifstream &phr);
+void zilchFace(int *output, std::string rootRoute);
 void phraseToShow(int v, std::ifstream& file);
+std::string configLoader(std::string route, int index);
 
 int main(int argc, char* argv[])
 {
 	int code = 0;
-	std::string phrasesRoute = "/home/hunish/Desktop/coding/CustomCommands/SysDepen/codir_splash_phrase.txt";
+	std::string rootRoute = "/home/hunish/Desktop/coding/CustomCommands/codir/";
+
+	std::string phrasesRoute = configLoader(rootRoute, 2);
+
 	std::ifstream phrases(phrasesRoute);
 	if(!phrases.is_open())
 	{
-		std::cerr << "There's no " << phrasesRoute << " file!\n";
-		code ++;
+		std::cerr << "There's no phrase file!\n";
+		code += 1;
 	}
 
-	int phraseNumber = selectedPhraseNumber(&phrases);
+	int phraseNumber = selectedPhraseNumber(phrases);
 	if(argc > 1 && std::string(argv[1]) == "2")
 	{
-			zilchFace(&code);
+			zilchFace(&code, rootRoute);
 	}
 
 	phrases.clear();
@@ -59,14 +64,14 @@ void phraseToShow(int v, std::ifstream& file)
 	}
 }
 
-void zilchFace(int *output)
+void zilchFace(int *output, std::string rootRoute)
 {
-	std::string route = "/home/hunish/Desktop/coding/CustomCommands/SysDepen/codir_splash_5.txt";
+	std::string route = configLoader(rootRoute, 3);
 	std::ifstream face(route);
 	if(!face.is_open())
 	{
-		std::cerr << "There's no " << route << " file!\n";
-		(*output) ++;
+		std::cerr << "There's no splash file!\n";
+		(*output) += (1 << 1);
 	}else
 	{
 		std::cout << DARKGRN;
@@ -79,12 +84,12 @@ void zilchFace(int *output)
 	}
 }
 
-int numberOfLines(std::ifstream *phr)
+int numberOfLines(std::ifstream& phr)
 {
     std::string line;
     int lineCount = 0;
 
-    while(std::getline(*phr, line))
+    while(std::getline(phr, line))
     {
         ++ lineCount;
     }
@@ -92,14 +97,48 @@ int numberOfLines(std::ifstream *phr)
     return lineCount;
 }
 
-int selectedPhraseNumber(std::ifstream *phr)
+int selectedPhraseNumber(std::ifstream& phr)
 {
-	phr -> clear();
-	phr -> seekg(0);
+	phr.clear();
+	phr.seekg(0);
 
 	int totalLines = numberOfLines(phr);
 
 	std::random_device roll;
 	std::uniform_int_distribution<> asMuchAsLines(1, totalLines);
 	return asMuchAsLines(roll);
+}
+
+std::string configLoader(std::string route, int index)
+{
+	std::string configF = route + "config";
+	std::ifstream fileC(configF);
+
+	if(!fileC.is_open())
+	{
+		std::cout << RED << "There's no config file!\n"
+				  << RESET << "One was created.\n";
+		std::ofstream newFile("config");
+		newFile << "# Use line 2 for the file name of the list."
+				<< " And line 3 for the file name of the ascii art.\n";
+		newFile.close();
+	}
+
+	fileC.clear();
+	fileC.seekg(0);
+
+	std::string fileName;
+	int lineNumber = 1;
+
+	while(std::getline(fileC, fileName))
+    {
+        if(index == lineNumber)
+        {
+        	fileName = route + fileName;
+        	break;
+        }
+        lineNumber ++;
+    }
+
+	return fileName;
 }
