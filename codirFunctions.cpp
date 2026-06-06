@@ -1,10 +1,13 @@
 #include "codirHeader.h"
 
-void phraseToShow(int v, std::ifstream& file)
+void phraseToShow(int v, std::ifstream& file, char arg)
 {
-	std::cout << "\n\n" << BLUE << std::setw(22) << " " 
-			  << "Welcome to your coding directory Hunish! n.n " << HEART
-			  << "~ ♥\n\n";
+	if(arg == '1')
+	{
+		std::cout << "\n\n" << BLUE << std::setw(22) << " " 
+				  << "Welcome to your coding directory Hunish! n.n " << HEART
+				  << "~ ♥\n\n";
+	}
 
 	std::string lineToShow;
 	int currentLine = 1;
@@ -13,14 +16,29 @@ void phraseToShow(int v, std::ifstream& file)
 	{
 		if(currentLine == v)
 		{
-			std::cout << std::setw(10) << " " << MAGENTA << lineToShow
-					  << "  💖\n\n";
+			switch(arg)
+			{
+			case '1':
+				std::cout << MAGENTA;
+				lineToShow += "  💖\n";;
+				break;
+			case '2':
+				std::cout << GREEN;
+				break;
+			case '3':
+				std::cout << RED;
+				break;
+			}
+
+			std::cout << std::setw(10) << " " << lineToShow << '\n';
+					  //<< "  💖\n\n";
 			break;
 		}
 		currentLine ++;
 	}
 }
 
+/*
 void zilchFace(int *output, std::string rootRoute)
 {
 	std::string route = configLoader(rootRoute, 3);
@@ -40,6 +58,7 @@ void zilchFace(int *output, std::string rootRoute)
 		std::cout << RESET;
 	}
 }
+*/
 
 int numberOfLines(std::ifstream& phr)
 {
@@ -83,12 +102,11 @@ int selectedPhraseNumber(std::ifstream& phr, std::string& route)	//	<==== From h
 
 int logCheck(std::string route, int match, int percent)
 {
-	std::string logFile = route + "logFile";
-	std::ifstream openedLog(logFile);
+	std::ifstream openedLog(route);
 
 	if(!openedLog.is_open())
 	{
-		std::ofstream newFile(logFile);
+		std::ofstream newFile(route);
 		newFile << match;
 		newFile.close();
 		return 0;
@@ -120,7 +138,7 @@ int logCheck(std::string route, int match, int percent)
 		numbers.push_back(std::to_string(match));
 	}
 
-	std::ofstream writeLog(logFile);
+	std::ofstream writeLog(route);
 
 	for(const auto& ln : numbers)
 	{

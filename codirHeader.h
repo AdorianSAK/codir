@@ -9,9 +9,10 @@
 #define HEART "\e[38;5;197m"
 #define MAGENTA "\e[38;5;207m"
 #define RED "\e[38;5;196m"
+#define GREEN "\e[38;5;076m"
 
 int selectedPhraseNumber(std::ifstream &phr, std::string& route);
 void zilchFace(int *output, std::string rootRoute);
-void phraseToShow(int v, std::ifstream& file);
+void phraseToShow(int v, std::ifstream& file, char arg);
 std::string configLoader(std::string route, int index);
 int logCheck(std::string route, int match, int percent);

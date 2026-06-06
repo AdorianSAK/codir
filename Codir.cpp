@@ -3,28 +3,63 @@
 int main(int argc, char* argv[])
 {
 	int code = 0;
-	std::string rootRoute = "/home/hunish/Desktop/coding/CustomCommands/codir/";
-	std::string logRoute = rootRoute + "logFile";
+	std::string fileRoute = "/home/hunish/Desktop/coding/CustomCommands/codir/";
 
-	std::string phrasesRoute = configLoader(rootRoute, 2);
+	int lineOfConfig = 0;
 
-	std::ifstream phrases(phrasesRoute);
-	if(!phrases.is_open())
+	std::string logRoute;
+
+	switch(argv[1][0])
+	{
+	case '1':
+		logRoute = fileRoute + "logSplash";
+		lineOfConfig = 2;
+		break;
+	case '2':
+		logRoute = fileRoute + "logCompile";
+		lineOfConfig = 3;
+		break;
+	case '3':
+		logRoute = fileRoute + "logFail";
+		lineOfConfig = 4;
+		break;
+	}
+
+	/*
+	if(argc > 1 && std::string(argv[1]) == "1")
+	{
+		logRoute = fileRoute + "logSplash";
+		lineOfConfig = 2;
+	}else
+	{
+		logRoute = fileRoute + "logCompile";
+		lineOfConfig = 3;
+	}
+	*/
+
+	//std::string logRoute = fileRoute + "logFile";
+
+	std::string phrasesRoute = configLoader(fileRoute, lineOfConfig);
+
+	std::ifstream phrasesFile(phrasesRoute);
+	if(!phrasesFile.is_open())
 	{
 		std::cerr << "There's no phrase file!\n";
 		code += 1;
 	}
 
-	int phraseNumber = selectedPhraseNumber(phrases, logRoute);
+	int phraseNumber = selectedPhraseNumber(phrasesFile, logRoute);
+	/*
 	if(argc > 1 && std::string(argv[1]) == "2")
 	{
-			zilchFace(&code, rootRoute);
+		zilchFace(&code, fileRoute);
 	}
+	*/
 
-	phrases.clear();
-	phrases.seekg(0);
+	phrasesFile.clear();
+	phrasesFile.seekg(0);
 
-	phraseToShow(phraseNumber, phrases);
+	phraseToShow(phraseNumber, phrasesFile, argv[1][0]);
 
 	return code;
 }
@@ -36,11 +71,11 @@ std::string configLoader(std::string route, int index)
 
 	if(!fileC.is_open())
 	{
-		std::cout << RED << "There's no config file!\n"
+		std::cout << RED << "There's no config file\n"
 				  << RESET << "One was created.\n";
 		std::ofstream newFile(configF);
-		newFile << "# Use line 2 for the file name of the list."
-				<< " And line 3 for the file name of the ascii art.\n";
+		newFile << "# Use line 2 for the file name of the list.\n";
+				//<< " And line 3 for the file name of the ascii art.\n";
 		newFile.close();
 	}
 

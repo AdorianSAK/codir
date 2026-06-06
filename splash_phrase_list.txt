@@ -1,13 +1,7 @@
 You got this!
-E1M1 Wasn't made in one day!
-Debug with patience!
 Can goblin help you?
-eat(); code(); sleep(); repeat();
-Coding skills leveled up!
 Ask Zilch if you got any doubt!
 Enjoy your coding journey!
-Coding adventures await!
-Don't give up!
 Embrace the code!
 Coding is your superpower!
 Keep calm and code on!
@@ -15,10 +9,8 @@ Dream big, code bigger!
 Turn bugs into features!
 Coding is an art!
 May your code be bug-free!
-Stay curious!
 Your code is magical!
 Study hard!
-Levep up your coding skills!
 Embrace the powerful coder within you!
 Coding is a journey!
 Achieve coding greatness!
@@ -29,7 +21,6 @@ Stay passionate about coding!
 Explore new coding horizons!
 Challege accepted!
 Coding is your happy place!
-Create, code, conquer!
 In your code, we trust!
 Coding is your special magic!
 Never stop coding!
@@ -40,22 +31,17 @@ Coding is our delight!
 Let the code flow!
 Keep coding and keep smiling!
 +3 Code profficiency!
-You’re stronger than you think, dummy!
 I believe in you, even if the world’s dumb!
 Get up, fight again! I’ll bite anyone who says you can’t!
 You’re my hero, even when you mess up.
 Tough day? Good. You’re tougher!
 No giving up! Or I’ll stab your sadness myself!
-You made it this far... that’s goblin-level stubbornness!
-Even goblins trip. We just snarl and keep walking.
 You sparkle, even when you’re muddy.
-You’re my favorite big human, so don’t you dare quit!
 Dumb human... makin' my chest all jumpy.
 If you fall... I'll drag your heavy butt to safety. Don't make me!
 I ain't soft, but... maybe for you... a little.
 Don't go breakin' yourself. I need ya.
 You're stupid. Brave. Stupid and brave. I like that.
-You watch my back... I'll watch yours. Deal?
 If anyone hurts you... I'll punch their nose into their brain.
 Tch... don’t think I’m blushing! It's just... hot by the fire!
 You smell nice. For a big oaf.
@@ -66,7 +52,6 @@ I don’t need anyone... maybe just you, idiot.
 You smell like sweat and trouble... I like it.
 Bet you think you’re tougher than me. You ain't.
 Don’t get used to me being nice. I bite.
-You mess up, I’ll yell first and patch you up after.
 I don’t need saving... but if you try, I might let you.
 You’re too soft... it makes my chest hurt.
 Nobody touches you but me. Not even the wind.
@@ -90,27 +75,16 @@ Every line of code is a step toward something new. What will today bring?
 They say every line of code tells a story. Let’s make today’s story worth telling.
 It’s not about the destination. It’s about the journey, one bug at a time.
 The world may have taken my tribe, but it won’t take my ability to code. Let’s get to work.
-Debugging is life
-Coffee + code = success
-Compiler errors are my favorite puzzle
-If (bug) { fix(); } else { addFeature(); }
 #Zilch4President
 <error>: found infinite loop, fix your life
 Coding is my cardio
 Variables are like friends: some you trust, others you just ignore
 JavaScript is like a treasure hunt, but the treasure is a bug
-Live long and compile
-It’s not a bug, it’s a feature
-apt install coffee
 While (sleeping) { dream(); }
 iCode, therefore iAm
-// TODO: Fix my life
 if (life == "hard") { coffee++; }
-Success = false; tryAgain()
 404: Motivation Not Found
 Working on my next big idea... after my nap
-commit -m "It works, I think"
-Time to refactor my dreams
 console.log('Zilch is here to stay!');
 Everything is a variable, even you
 Don’t get too close, I might get soft
@@ -120,16 +94,12 @@ I can do this, I just need five more minutes... or maybe a snack
 You think you’ve seen all of me? there’s more under the hood
 I’m always busy, but i’ll make time for you... just this once
 I wasn’t expecting that… but I guess I’ll deal with it.
-Wait, what just happened? You better explain!
 I didn’t sign up for this level of chaos.
 I didn’t think it would be *this* complicated.
 What do you mean “it’s not working”? You *better* fix it!
 I’ll fix it... but only because I can’t stand seeing you fail.
-I could tell you what to do, but I enjoy watching you struggle.
 If this breaks again, I’m blaming you.
 I didn’t know we were running a circus here!
-I’m confused, but that’s not new.
-You messed up again? What a surprise.
 I feel like I'm stuck in an endless grind... where’s the boss fight already?
 Why does every dungeon have the same traps? I’m not impressed!
 If this is a "tutorial," it’s a pretty messed-up one!
@@ -151,13 +121,9 @@ I’m the *underdog* here, but I’ll make sure to grind you down like an Orc in
 I’d rather take on a *Black Knight* from *Dark Souls* than face more of these problems.
 Who’s the boss around here? Because it sure isn’t me. At least not yet.
 Is this what they mean by “leveling up”? Because I’m still at level 1 on patience.
-Who needs armor? I’ll just dodge everything.
-Maps? Pfft, I know the way... somewhere.
 Why bother with strategy? It’s all about the thrill!
 Inventory? I’ll carry all the loot, I don’t need no organization.
 Routes? I’m taking the scenic route... or maybe not. Who knows!
-Hold my sword, I’ll figure it out as I go!
-Rechecking things? Nah, I’ve got this. Probably.
 Armor status? I’m fine, just a scratch... okay, maybe a few.
 Maps are overrated, I prefer to wander and hope for the best.
-Let's go! I don’t need no stinkin’ plan, let’s just charge!
+Fuck you NVIDIA
