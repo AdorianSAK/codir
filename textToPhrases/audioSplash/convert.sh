@@ -1,0 +1,7 @@
+for f in *.wav; do
+    ffmpeg -loglevel error -y \
+        -i "$f" \
+        -c:a libvorbis \
+        -q:a 2 \
+        "${f%.wav}.ogg" && rm "$f"
+done

@@ -61,6 +61,13 @@ int main(int argc, char* argv[])
 
 	phraseToShow(phraseNumber, phrasesFile, argv[1][0]);
 
+	std::string cmd =
+    	"play /home/hunish/Desktop/coding/CustomCommands/codir/textToPhrases/audioSplash/" +
+    	std::to_string(phraseNumber) +
+    	".ogg >/dev/null 2>&1 </dev/null &";
+
+	system(cmd.c_str());
+
 	return code;
 }
 
