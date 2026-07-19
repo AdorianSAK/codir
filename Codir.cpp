@@ -64,7 +64,7 @@ int main(int argc, char* argv[])
 	std::string cmd =
     	"play /home/hunish/Desktop/coding/CustomCommands/codir/textToPhrases/audioSplash/" +
     	std::to_string(phraseNumber) +
-    	".ogg pitch 180 tempo 1.08 treble 3 bass -2 vol 0.9 "
+    	".ogg pitch 180 tempo 1.08 treble 3 bass -2 vol 0.5 "
     	">/dev/null 2>&1 </dev/null &";
 
     //std::cout << cmd;
