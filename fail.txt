@@ -20,7 +20,7 @@ The dungeon collapses around us.
 I found the bug. It's everywhere.
 The executable has chosen not to exist.
 The build failed successfully.
-That's a fancy way of saying "no."
+That's a fancy way of saying "no".
 The compiler laughed at us.
 This quest has encountered unexpected dragons.
 The goblin engineers have fled the scene.
@@ -43,7 +43,7 @@ Syntax has left the chat.
 The code tripped over itself.
 We have discovered a new mistake.
 This cave was trapped.
-The goblin council votes "no."
+The goblin council votes "no".
 The executable escaped into the woods.
 A wild error appeared!
 Critical confusion detected.

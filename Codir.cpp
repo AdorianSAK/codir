@@ -9,19 +9,24 @@ int main(int argc, char* argv[])
 
 	std::string logRoute;
 
+	std::string cmd = "";
+
 	switch(argv[1][0])
 	{
 	case '1':
 		logRoute = fileRoute + "logSplash";
 		lineOfConfig = 2;
+		cmd += "play /home/hunish/Desktop/coding/CustomCommands/codir/textToPhrases/audioSplash/";
 		break;
 	case '2':
 		logRoute = fileRoute + "logCompile";
 		lineOfConfig = 3;
+		cmd += "play /home/hunish/Desktop/coding/CustomCommands/codir/textToPhrases/audioCompile/";
 		break;
 	case '3':
 		logRoute = fileRoute + "logFail";
 		lineOfConfig = 4;
+		cmd += "play /home/hunish/Desktop/coding/CustomCommands/codir/textToPhrases/audioFail/";
 		break;
 	}
 
@@ -61,10 +66,9 @@ int main(int argc, char* argv[])
 
 	phraseToShow(phraseNumber, phrasesFile, argv[1][0]);
 
-	std::string cmd =
-    	"play /home/hunish/Desktop/coding/CustomCommands/codir/textToPhrases/audioSplash/" +
+	cmd +=
     	std::to_string(phraseNumber) +
-    	".ogg pitch 180 tempo 1.08 treble 3 bass -2 vol 0.5 "
+    	".ogg pitch 260 tempo 1.12 treble 5 bass -5 reverb 8 vol 0.5 "
     	">/dev/null 2>&1 </dev/null &";
 
     //std::cout << cmd;
