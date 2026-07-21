@@ -68,7 +68,7 @@ int main(int argc, char* argv[])
 
 	cmd +=
     	std::to_string(phraseNumber) +
-    	".ogg pitch 260 tempo 1.12 treble 5 bass -5 reverb 8 vol 0.5 "
+    	".ogg pitch 260 tempo 1.12 treble 5 bass -5 reverb 8 vol 0.35 "
     	">/dev/null 2>&1 </dev/null &";
 
     //std::cout << cmd;
